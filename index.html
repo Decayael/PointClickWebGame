@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <title>point and click adventure</title>
+</head>
+
+<body>
+    <div id="title">
+        <h1 id="mainTitle"></h1>
+    </div>
+    <div id="gameWindow">
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <div id="mainCharacterSpeech" class="foreground"></div>
+
+                <div id="counterSpeech" class="foreground"></div>
+                <div id="brownBar"></div>
+            </div>
+        </div>
+
+        <!-- inventory -->
+        <div id="inventoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+
+            </ul>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
