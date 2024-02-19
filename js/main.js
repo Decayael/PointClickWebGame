@@ -6,9 +6,9 @@ const gameWindow = document.getElementById("gameWindow");
 //Game state
 gameState = {
     "door2locked": true,
-    "inventory": []
+    "inventory": [
+    ]
 }
-
 
 //Main Character
 const mainCharacter = document.getElementById("mainCharacter");
@@ -42,10 +42,7 @@ gameWindow.onclick = function (e) {
             if(document.getElementById("key1") !== null){
                 console.log('Found key!');
                 document.getElementById("key1").remove();
-                const keyElement = document.createElement("li");
-                keyElement.id = "inv-key";
-                keyElement.innerText = "Key";
-                inventoryList.appendChild(keyElement);
+                changeInventory('key', 'add');
             }
             
             break;
@@ -55,7 +52,7 @@ gameWindow.onclick = function (e) {
                 if(document.getElementById("inv-key") !== null) {
                     //yes -> unlock door?
                     gameState.door2locked = false;
-                    document.getElementById("inv-key").remove();
+                    changeInventory('key', 'delete');
                     console.log('Door unlocked!');
 
                 } else {
@@ -84,3 +81,52 @@ gameWindow.onclick = function (e) {
     }
 
 }
+
+/**
+ * function to change inventory
+ * @param {string} itemName 
+ * @param {string} action "add", "delete"
+ * @returns 
+ */
+function changeInventory(itemName, action) {
+    if(itemName == null || action == null) {
+        console.log('wrong parameters given to changeInventory()');
+        return 
+    }
+
+    switch(action) {
+        case 'add':
+            gameState.inventory.push(itemName);
+            break
+        case 'delete':
+            gameState.inventory.find(function(item, index){
+                if(item == itemName) {
+                    var index = gameState.inventory.indexOf(item);
+                    if (index !== -1) {
+                        gameState.inventory.splice(index, 1);
+                    }
+                }
+            })
+            break
+
+        default:
+            break;
+    }
+    updateInventory(gameState.inventory, inventoryList);
+}
+
+/**
+ * update inventoryList
+ * @param {Array} inventory array of items 
+ * @param {HTMLElement} inventoryList html <ul> element 
+ */
+function updateInventory(inventory, inventoryList){
+    inventoryList.innerHTML = '';
+    inventory.forEach(function(item) {
+        const inventoryItem = document.createElement("li");
+        inventoryItem.id = "inv-" + item;
+        inventoryItem.innerText = item;
+        inventoryList.appendChild(inventoryItem);
+    })
+}
+
