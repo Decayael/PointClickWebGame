@@ -53,6 +53,23 @@ p {
     left: 400px;
 }
 
+#door2 {
+    width: 44px;
+    height: 54px;
+    /* background-color: #fb00ff; */
+    top: 296px;
+    left: 169px;
+}
+
+#key1 {
+    width: 32px;
+    height: 32px;
+    background-color: #fffb00;
+    opacity: 1;
+    top: 166px;
+    left: 416px;
+}
+
 #sign {
     width: 64px;
     height: 32px;
