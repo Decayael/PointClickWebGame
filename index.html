@@ -22,8 +22,14 @@
         <!--dialog bar-->
         <div id="dialogBar" class="foreground">
             <div id="setMainDialog">
-                <div id="mainCharacterSpeech" class="foreground"></div>
-                <div id="counterSpeech" class="foreground"></div>
+                <div id="mainCharacterAvatar" class="foreground">
+                    <img src="assets/img/portairt.png" alt="main character avatar">
+                </div>
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterAvatar" class="foreground">
+                    <img id="counterAvatarImg" src="assets/img/portairStatue.png" alt="counter avatar">
+                </div>
                 <div id="brownBar"></div>
             </div>
         </div>
@@ -34,7 +40,7 @@
             <ul id="inventoryList">
 
             </ul>
-            
+
         </div>
 
         <!--Foreground items-->
@@ -43,10 +49,11 @@
         <div id="door2" class="foreground"></div>
 
         <div id="sign" class="foreground"></div>
+        <div id="statue" class="foreground"></div>
 
         <!--Main character-->
         <div id="mainCharacter" class="heroCharacter">
-
+            <img id="mcImage" draggable="false" src="assets/img/animated-character-1-idle.gif" alt="main character">
         </div>
 
         <!--Background-->
@@ -54,6 +61,13 @@
             <img src="assets/img/tilemap1.jpg" draggable="false" alt="tilemap level 1">
         </div>
     </div>
+
+    <audio id="mcAudio">
+        <source src="assets/audio/Gibberish - Sound Effect_01.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="cAudio">
+        <source src="assets/audio/high pitch voice.mp3" type="audio/mpeg">
+    </audio>
     <script src="js/main.js"></script>
 </body>
 
