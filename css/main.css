@@ -10,6 +10,7 @@ body {
 
 h1 {
     color: white;
+    text-align: center;
 }
 
 p {
@@ -17,7 +18,7 @@ p {
 }
 
 /*ID's */
-#map2, #map3, #map4 {
+#map2, #map3, #map4, #map5 {
     display: none;
 }
 
@@ -35,18 +36,8 @@ p {
     grid-column-start: 2;
     grid-row-start: 2;
 
-    background-color: blue;
+    background-color: rgb(255, 0, 204);
 }
-#gameWindow2 {
-    position: relative;
-    width: 800px;
-    height: 608px;
-    grid-column-start: 2;
-    grid-row-start: 2;
-
-    background-color: blue;
-}
-
 
 /*Main charcater*/
 #mainCharacter {
@@ -181,7 +172,16 @@ p {
     top: 0px;
 }
 
-#teleporter{
+#teleporter1{
+    width: 32px;
+    height: 32px;
+    left: 415px; 
+    top: 160px;
+    background-color: #FFFFFF;
+    opacity: 0;
+}
+
+#teleporter2{
     width: 32px;
     height: 32px;
     left: 415px; 

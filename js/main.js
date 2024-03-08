@@ -45,6 +45,7 @@ let ismap2 = false;
 const door1 = document.getElementById("door1");
 const sign = document.getElementById("sign");
 let uwu = 0;
+let owo = 0;
 
 
 gameWindow.onclick = function (e) {
@@ -109,8 +110,11 @@ gameWindow.onclick = function (e) {
 
                 }
                 else{
-                    //wow kist open
+                    if(owo == 0){
+                        owo++;                    //wow kist open
                     changeInventory('Magic Stone', 'add');
+                    }
+
                 }
             if (uwu == 0) {            // check if we have dynamite and a lighter
                 if (document.getElementById("inv-dynamite") != null && document.getElementById("inv-lighter") != null) {
@@ -164,15 +168,31 @@ gameWindow.onclick = function (e) {
 
         break;
         
-        case "teleporter":
+        case "teleporter1":
         console.log('enter new map')
             document.getElementById("mainCharacter").style = "left: 755px; top: 173px;";
             document.getElementById("map1").style.display = "none";
             document.getElementById("map2").style.display = "none";
             document.getElementById("map3").style.display = "none";
             document.getElementById("map4").style.display = "inline";
-            
+            document.getElementById("map5").style.display = "none";
+            showMessage(mainCharacterSpeech, mcAudio, "The runes have been activated! What is happening!?")
+            changeInventory('Magic Stone', 'delete');
             break;
+
+            case "teleporter2":
+                console.log('enter new map')
+            document.getElementById("mainCharacter").style = "left: 755px; top: 173px;";
+            document.getElementById("map1").style.display = "none";
+            document.getElementById("map2").style.display = "none";
+            document.getElementById("map3").style.display = "none";
+            document.getElementById("map4").style.display = "none";
+            document.getElementById("map5").style.display = "inline";
+            document.getElementById("inventoryBox").style.display = "none";
+            document.getElementById("mainCharacter").style.display = "none";
+            
+            
+                break;
 
 
         case "statue":
