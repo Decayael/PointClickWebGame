@@ -19,20 +19,57 @@
     </div>
 
     <div id="gameWindow">
-        <!--dialog bar-->
-        <div id="dialogBar" class="foreground">
-            <div id="setMainDialog">
-                <div id="mainCharacterAvatar" class="foreground">
-                    <img src="assets/img/portairt.png" alt="main character avatar">
-                </div>
-                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
-                <div id="counterSpeech" class="foreground speech-bubble">...</div>
-                <div id="counterAvatar" class="foreground">
-                    <img id="counterAvatarImg" src="assets/img/portairStatue.png" alt="counter avatar">
-                </div>
-                <div id="brownBar"></div>
+        <div id="map1">
+            <!--Foreground items-->
+            <div id="key1" class="foreground"></div>
+            <div id="dynamite1" class="foreground"></div>
+            <div id="door1" class="foreground"></div>
+            <div id="door2" class="foreground"></div>
+
+            <div id="arrow1" class="foreground"></div>
+            <div id="sign" class="foreground"></div>
+            <div id="statue" class="foreground"></div>
+
+
+        
+            <!--Background-->
+            <div id="tilemap" class="background">
+                <img src="assets/img/tilemap1.jpg" draggable="false" alt="tilemap level 1">
             </div>
         </div>
+        <div id="map2">
+            <div id="door2" class="foreground"></div>
+            <div id="lighter1" class="foreground"></div>
+        
+            <!--Background-->
+            <div id="tilemap" class="background">
+                <img src="assets/img/tilemap2.jpg" draggable="false" alt="inside of the house tile map 2">
+            </div>
+        </div>
+        <div id="map3">
+            <div id="chest1" class="foreground"></div>
+            <div id="arrow2" class="foreground"></div>
+            <div id="teleporter" class="foreground"></div>
+        
+            <!--Background-->
+            <div id="tilemap" class="background">
+                <img src="assets/img/tilemap3.png" draggable="false" alt="tilemap level 3">
+            </div>
+        </div>
+
+        <div id="map4">
+            <div id="teleporter" class="foreground"></div>
+        
+            <!--Background-->
+            <div id="tilemap" class="background">
+                <img src="assets/img/tilemap4.png" draggable="false" alt="tilemap level 4">
+            </div>
+        </div>
+        <!--Main character-->
+        <div id="mainCharacter" class="heroCharacter">
+            <img id="mcImage" draggable="false" src="assets/img/animated-character-1-idle.gif" alt="main character">
+        </div>
+        
 
         <!-- inventory -->
         <div id="inventoryBox" class="foreground">
@@ -43,27 +80,23 @@
 
         </div>
 
-        <!--Foreground items-->
-        <div id="key1" class="foreground"></div>
-        <div id="door1" class="foreground"></div>
-        <div id="door2" class="foreground"></div>
-
-        <div id="sign" class="foreground"></div>
-        <div id="statue" class="foreground"></div>
-
-        <!--Main character-->
-        <div id="mainCharacter" class="heroCharacter">
-            <img id="mcImage" draggable="false" src="assets/img/animated-character-1-idle.gif" alt="main character">
-        </div>
-
-        <!--Background-->
-        <div id="tilemap" class="background">
-            <img src="assets/img/tilemap1.jpg" draggable="false" alt="tilemap level 1">
+       
+    </div>
+    <!--dialog bar-->
+    <div id="dialogBar" class="foreground">
+        <div id="setMainDialog">
+            <div id="mainCharacterAvatar" class="foreground">
+                <img src="assets/img/portairt.png" alt="main character avatar">
+            </div>
+            <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+            <div id="counterSpeech" class="foreground speech-bubble">...</div>
+            <div id="counterAvatar" class="foreground">
+                <img id="counterAvatarImg" src="assets/img/portairStatue.png" alt="counter avatar">
+            </div>
         </div>
     </div>
-
     <audio id="mcAudio">
-        <source src="assets/audio/Gibberish - Sound Effect_01.mp3" type="audio/mpeg">
+        <source src="assets/audio/party-phil-made-with-Voicemod.mp3" type="audio/mpeg">
     </audio>
     <audio id="cAudio">
         <source src="assets/audio/high pitch voice.mp3" type="audio/mpeg">

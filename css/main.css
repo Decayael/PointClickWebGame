@@ -17,6 +17,10 @@ p {
 }
 
 /*ID's */
+#map2, #map3, #map4 {
+    display: none;
+}
+
 
 #title {
     grid-column-start: 2;
@@ -33,6 +37,16 @@ p {
 
     background-color: blue;
 }
+#gameWindow2 {
+    position: relative;
+    width: 800px;
+    height: 608px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    background-color: blue;
+}
+
 
 /*Main charcater*/
 #mainCharacter {
@@ -58,22 +72,63 @@ p {
     top: 296px;
     left: 169px;
 }
+#door3 {
+    width: 44px;
+    height: 54px;
+    /* background-color: #fb00ff; */
+    top: 296px;
+    left: 169px;
+}
 
 #key1 {
     width: 32px;
     height: 32px;
     background-color: #fffb00;
-    opacity: 1;
+    opacity: 0;
     top: 166px;
     left: 416px;
 }
+#lighter1 {
+    width: 32px;
+    height: 32px;
+    background-color: aqua;
+    opacity: 0;
+    top: 280px;
+    left: 110px;
+}
 
 #sign {
-    width: 64px;
-    height: 32px;
+    width: 32px;
+    height: 48px;
     background-color: #442c1c;
-    top: 450px;
-    left: 10px;
+    opacity: 0;
+    top: 435px;
+    left: 96px;
+}
+#arrow1 {
+    width: 32px;
+    height: 32px;
+    background-color: #ff0000;
+    opacity: 0;
+    top: 175px;
+    left: 768px;
+}
+
+#arrow2 {
+    width: 32px;
+    height: 32px;
+    background-color: #ff0000;
+    opacity: 0;
+    top: 125px;
+    left: 0px;
+}
+#chest1 {
+    width: 32px;
+    height: 32px;
+    background-color: #ff0000;
+    opacity: 0;
+    top: 158px;
+    left: 705px;
 }
 
 #statue {
@@ -81,6 +136,12 @@ p {
     height: 64px;
     top: 284px;
     left: 704px;
+}
+#stonePillarInside {
+    width: 25px;
+    height: 36px;
+    top: 280px;
+    left: 112px;
 }
 
 /*Inventory box*/
@@ -103,17 +164,9 @@ p {
 }
 
 #setMainDialog {
-    position: relative;
+    bottom: 0;
     height: 64px;
-    width: 800px;
-}
-
-#brownBar {
-    position: absolute;
-    height: 32px;
-    width: 800px;
-    background-color: #442c1c;
-    bottom: 0px;
+    width: 1000px;
 }
 
 #mainCharacterAvatar {
@@ -126,6 +179,15 @@ p {
 #mainCharacterSpeech {
     left: 72px;
     top: 0px;
+}
+
+#teleporter{
+    width: 32px;
+    height: 32px;
+    left: 415px; 
+    top: 160px;
+    background-color: #FFFFFF;
+    opacity: 0;
 }
 
 #counterAvatar {
